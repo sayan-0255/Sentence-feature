@@ -19,7 +19,7 @@ function App() {
   const [timerKey, setTimerKey] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:3001/questions')
+    fetch('/data/questions.json')
       .then(response => {
         if (!response.ok) throw new Error('Failed to fetch questions');
         return response.json();
